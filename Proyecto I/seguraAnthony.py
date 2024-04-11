@@ -19,10 +19,8 @@ def encontrarCombina(C, R): #Función para encontrar todas las combinaciones del
             denominadorString = '0' * cerosFaltantes + denominadorString
         
         if digitosRepeti(numeradorString + denominadorString, R): #Verificar las repeticiones permitidas, por Numerador y Denominador juntos
-            resultado = numerador / denominador
-            if resultado == C:
-                print(f"{numeradorString}/{int(denominadorString)}={C}")
-                encontrada = True
+            print(f"{numeradorString}/{int(denominadorString)}={C}")
+            encontrada = True
     if not encontrada:
         print(f"No existe ninguna combinación para los valores de C={C} y R={R}")
 
