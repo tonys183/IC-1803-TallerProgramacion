@@ -7,20 +7,20 @@ def digitosRepeti(numero, R): #Función para verificar que no exceda de las repe
             return False
     return True
 
-def encontrarCombina(C, R): #Función para encontrar todas las combinaciones del C dado
+def encontrarCombina(C, R):#Función para encontrar todas las combinaciones del C dado
     encontrada = False
     for denominador in range(10000 // C, 100000 // C):
         numerador = denominador * C
         numeradorString = str(numerador) #Convertir el Numerador a String para verificar las repeticiones de dígitos máximas permitidas
         denominadorString = str(int(denominador)) #Convertir el Denominador a String para evaluar su largo y verificar las repeticiones de dígitos máximas permitidas
 
-        if len(denominadorString) < 5: #Condición por si el denominador tiene un largo < 5
-            cerosFaltantes = 5 - len(denominadorString)
-            denominadorString = '0' * cerosFaltantes + denominadorString
+        if len(denominadorString) >= 4:
+            if len(denominadorString) < 5: #Condición por si el denominador tiene un largo < 5
+                denominadorString = '0' + denominadorString
         
-        if digitosRepeti(numeradorString + denominadorString, R): #Verificar las repeticiones permitidas, por Numerador y Denominador juntos
-            print(f"{numeradorString}/{int(denominadorString)}={C}")
-            encontrada = True
+            if digitosRepeti(numeradorString + denominadorString, R): #Verificar las repeticiones permitidas, por Numerador y Denominador juntos
+                print(f"{numerador}/{denominador}={C}")
+                encontrada = True
     if not encontrada:
         print(f"No existe ninguna combinación para los valores de C={C} y R={R}")
 
@@ -34,8 +34,8 @@ def main():
             else:
                 print(f"Los valores de C:{C} o R:{R} se encuentran fuera del rango")
     else:
-        print("Inválido número de casos")
-    
-
+        print("Inválido número de casos")    
 if __name__ == "__main__":
     main()
+
+
