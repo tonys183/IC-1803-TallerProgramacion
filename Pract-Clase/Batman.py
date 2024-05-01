@@ -10,6 +10,8 @@ def newBodega(matriz):
                         break
                     if matriz[i][k] == ".":
                         matriz[i][k] = "<"
+                    if matriz[i][k] == "B":
+                        return False
             
             if matriz[i][j] == ">":
                 for k in range(j, len(matriz[0])):
@@ -17,6 +19,8 @@ def newBodega(matriz):
                         break
                     if matriz[i][k] == ".":
                         matriz[i][k] = ">"
+                    if matriz[i][k] == "B":
+                        return False
 
             if matriz[i][j] == "^":
                 for k in range(i, -1, -1):
@@ -24,6 +28,8 @@ def newBodega(matriz):
                         break
                     if matriz[k][j] == ".":
                         matriz[k][j] = "^"
+                    if matriz[i][k] == "B":
+                        return False
 
             if matriz[i][j] == "v":
                 for k in range(len(matriz)):
@@ -31,6 +37,8 @@ def newBodega(matriz):
                         break
                     if matriz[k][j] == ".":
                         matriz[k][j] = "v"
+                    if matriz[i][k] == "B":
+                        return False
     return matriz 
 
 def ubicarBatman(matriz):
@@ -60,11 +68,14 @@ def batman(matriz):
 
 def main():
     bodega = [
-        [".",".","X",".","v",".","<"],
-        [".",".",".",".","X","B","X"],
-        [">",".","X",".",".",".","^"]]
+        [".",".",".",".",".",".","."],
+        [".",".",".",".",".","B","X"],
+        [".",".",".",".",".",".","."]]
     
-    print(batman(newBodega(bodega)))
+    if not newBodega(bodega):
+        print(newBodega(bodega))
+    else:
+        print(batman(newBodega(bodega)))
 
 if __name__ == '__main__':
     main()
