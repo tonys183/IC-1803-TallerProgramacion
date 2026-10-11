@@ -1,5 +1,15 @@
 # IC-1803 — Taller de Programación
 
+<p align="center">🐍</p>
+
+<p align="center">
+  <img alt="Python" src="https://img.shields.io/badge/Python-3776AB?style=flat-square">
+</p>
+
+<p align="center">
+  <a href="#temas-generales">Temas generales</a> · <a href="#proyecto-i">Proyecto I</a> · <a href="#proyecto-ii">Proyecto II</a> · <a href="#proyecto-iii">Proyecto III</a>
+</p>
+
 Soluciones a ejercicios del curso Taller de Programación (IC-1803), desarrolladas en Python.
 
 ## Temas generales
