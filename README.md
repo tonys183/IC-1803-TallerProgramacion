@@ -1,4 +1,4 @@
-# IC-1803-TallerProgra
+# IC-1803-TallerProgramación
 
 Soluciones a ejercicios del curso Taller de Programación (IC-1803), desarrolladas en Python.
 
