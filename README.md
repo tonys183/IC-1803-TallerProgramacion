@@ -23,3 +23,11 @@ $$
 
 Aquí, $C$ es el cociente dado y $R$ limita cuántas veces puede aparecer cada dígito entre el numerador y el denominador.
 La carpeta incluye la solución en Python y los casos de prueba.
+
+## Proyecto II
+
+El proyecto consistía en resolver el rompecabezas Katamino: buscar una forma de colocar un conjunto de piezas en un tablero rectangular de modo que quedara completamente cubierto, sin superposiciones ni espacios vacíos. La búsqueda debía considerar distintas posiciones y rotaciones de las piezas, así como casos sin solución.
+
+## Proyecto III
+
+El proyecto consistía en comprimir y descomprimir archivos mediante árboles de Huffman. A partir de la frecuencia de los símbolos, se construían códigos binarios para reducir el tamaño del archivo y permitir recuperar su contenido original sin pérdida de información.
